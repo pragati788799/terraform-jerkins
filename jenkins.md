@@ -114,7 +114,7 @@ pipeline {
         stage('Code Pull') {
             steps {
                 git branch: 'main',
-                url: 'https://github.com/mukundDeo9325/terraform-jerkins.git'
+                url: 'https://github.com/pragati788799/terraform-jerkins.git'
             }
         }
 
