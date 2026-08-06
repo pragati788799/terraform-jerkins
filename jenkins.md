@@ -23,8 +23,8 @@ pipeline {
     agent any
 
     environment {
-        DOCKERHUB_USER = "YOUR_DOCKERHUB_USERNAME"
-        REPO_NAME      = "YOUR_IMAGE_NAME"
+        DOCKERHUB_USER = "sneha788799"
+        REPO_NAME      = "terraform-jerkins"
     }
 
     stages {
@@ -32,7 +32,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/mukundDeo9325/terraform-jerkins.git'
+                    url: 'https://github.com/pragati788799/terraform-jerkins.git'
             }
         }
 
@@ -199,7 +199,7 @@ pipeline {
     agent { label 'eksagent' }
 
     environment {
-        AWS_DEFAULT_REGION = 'ap-northeast-1'
+        AWS_DEFAULT_REGION = 'ap-south-1'
     }
 
     stages {
@@ -207,7 +207,7 @@ pipeline {
         stage('Code Pull') {
             steps {
                 git branch: 'main',
-                url: 'https://github.com/mukundDeo9325/terraform-jerkins.git'
+                url: 'https://github.com/pragati788799/terraform-jerkins.git'
             }
         }
 
@@ -224,7 +224,7 @@ pipeline {
 
                     sh '''
                     aws eks update-kubeconfig \
-                    --region ap-northeast-1 \
+                    --region ap-south-1 \
                     --name EKS_CLOUD
 
                     kubectl get nodes
