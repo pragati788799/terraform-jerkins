@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: mukunddeo9325/cdecstudentapp:frontend
+        image: sneha788799/cdec-k8s:frontend
         ports:
         - containerPort: 80
 
