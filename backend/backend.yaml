@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: mukunddeo9325/cdecstudentapp:backend
+        image: sneha788799/cdec-k8s:backend
         ports:
         - containerPort: 8080
 
